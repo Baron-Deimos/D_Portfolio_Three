@@ -12,7 +12,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
-camera.position.z = 5;
+camera.position.z = 30;
 camera.position.y = 1;
 // Gltf Camera
 let blenderCamera;
@@ -46,12 +46,17 @@ loader.load(modelURL, (gltf) => {
       child.material.metalness = 0;
     }
   });
-  scene.add(model);
+  //scene.add(model);
   mixer = new THREE.AnimationMixer(gltf.scene);
   gltf.animations.forEach((clip) => {
     mixer.clipAction(clip).play();
   });
 });
+
+const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+const cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
 
 /* ---------- Animation ---------- */
 window.addEventListener("resize", (event) => {
@@ -64,6 +69,10 @@ function animate() {
   //controls.update();
   requestAnimationFrame(animate);
   var delta = clock.getDelta();
+  
+  cube.rotation.x += 0.01;
+	cube.rotation.y += 0.01;
+
   //if ( mixer ) mixer.update( delta );
   renderer.render(scene, camera);
 }

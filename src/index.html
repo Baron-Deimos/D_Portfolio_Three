@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>D Portfolio</title>
 
-        <script type="importmap">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>D Portfolio</title>
+
+    <script type="importmap">
             {
             "imports": {
                 "three": "https://cdn.jsdelivr.net/npm/three@v0.164.1/build/three.module.js",
@@ -14,11 +15,29 @@
             }
             }
         </script>
-        
-        <script type="module" src="three.js"></script>
-    </head>
 
-    <body>
-        <canvas id="scene"></canvas>
-    </body>
+    <script type="module" src="three.js"></script>
+</head>
+
+<body>
+    <canvas id="scene"></canvas>
+    <main>
+        <ul>
+            <li style="float: right; margin-right: 40px;"><img src="../assets/Grand_D.png" alt="D_Logo"></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">About</a></li>
+            <li><a href="#contact">Work</a></li>
+            <li><a href="#about">Contact</a></li>
+        </ul>
+
+        <div id="pageContent">
+            <img src="../assets/D_Title.png" alt="D_Title">
+
+            <div id="me">
+                <h1>Choose your caratere</h1>
+            </div>
+        </div>
+    </main>
+</body>
+
 </html>

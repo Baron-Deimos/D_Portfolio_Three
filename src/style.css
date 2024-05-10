@@ -7,4 +7,54 @@ body {
 canvas {
     top: 0px;
     left: 0px;
+    position: fixed;
+}
+
+main {
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li img {
+    width: 50px;
+    mix-blend-mode: darken;
+}
+
+li a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    display: block;
+    color: rgb(32, 32, 32);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111111a5;
+    color: rgb(198, 198, 198);
+}
+
+#pageContent {
+    margin-top: 100px;
+    width: 100%;
+}
+
+#pageContent img{
+    width:100%;
 }
