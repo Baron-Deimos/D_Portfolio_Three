@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrousel.css">
     <title>D Portfolio</title>
 
     <script type="importmap">
@@ -12,10 +13,10 @@
             "imports": {
                 "three": "https://cdn.jsdelivr.net/npm/three@v0.164.1/build/three.module.js",
                 "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.164.1/examples/jsm/"
+                }
             }
-            }
-        </script>
-
+    </script>
+    <script src="carrousel.js"></script>
     <script type="module" src="three.js"></script>
 </head>
 
@@ -35,7 +36,33 @@
 
             <div id="me">
                 <h1>Choose your caratere</h1>
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 2</div>
+                        <img src="../assets/D_Title.png" style="width:100%">
+                        <div class="text">Caption Text</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 2</div>
+                        <img src="../assets/Grand_D.png" style="width:100%">
+                        <div class="text">Caption Two</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
             </div>
+
+            <div id="work">My Work</div>
         </div>
     </main>
 </body>

@@ -3,7 +3,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("gainsboro");
+scene.background = new THREE.Color("#202020");
 let clock = new THREE.Clock();
 /* ---------- Caméra / Renderer ---------- */
 const camera = new THREE.PerspectiveCamera(
@@ -30,9 +30,6 @@ controls.enableDamping = true;
 controls.autoRotate = true;
 
 /* ---------- Object In Scene ---------- */
-var light = new THREE.DirectionalLight("white", 3);
-scene.add(light);
-
 let mixer;
 let modelURL = "../assets/homePage.glb",
   model;
@@ -69,11 +66,11 @@ function animate() {
   //controls.update();
   requestAnimationFrame(animate);
   var delta = clock.getDelta();
-  
-  cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
 
-  //if ( mixer ) mixer.update( delta );
+  // cube.rotation.x += 0.01;
+	// cube.rotation.y += 0.01;
+
+  if ( mixer ) mixer.update( delta );
   renderer.render(scene, camera);
 }
 animate();

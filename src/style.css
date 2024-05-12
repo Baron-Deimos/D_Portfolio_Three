@@ -1,7 +1,7 @@
 body {
     width: 100%;
     margin: 0px;
-    padding: 0ps;
+    padding: 0px;
 }
 
 canvas {
@@ -19,7 +19,7 @@ main {
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 10px;
+    padding: 5px;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -39,22 +39,31 @@ li a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25px;
     display: block;
-    color: rgb(32, 32, 32);
+    color: rgb(228, 228, 228);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover:not(.active) {
-    background-color: #111111a5;
-    color: rgb(198, 198, 198);
+    background-color: #ffffff82;
+    color: rgb(32, 32, 32);
 }
 
 #pageContent {
-    margin-top: 100px;
+    margin-top: 30px;
     width: 100%;
 }
 
-#pageContent img{
-    width:100%;
+#pageContent img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+#me {
+    margin-top: 20%;
+    color: aliceblue;
+    background-color:rgb(9, 55, 101);
 }
