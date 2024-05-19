@@ -55,15 +55,25 @@ li a:hover:not(.active) {
     width: 100%;
 }
 
-#pageContent img {
+#TitleImg {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    margin-top: 10%;
+    width: 60%;
 }
 
 #me {
-    margin-top: 20%;
+    margin-top: 40%;
+    width: 100%;
     color: aliceblue;
-    background-color:rgb(9, 55, 101);
+    background-color:rgba(122, 122, 122, 0.731);
+}
+
+#me h1{
+    padding: 20px;
+}
+
+#work {
+    background-color:rgb(38, 121, 88);
 }

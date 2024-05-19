@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { RGBELoader } from "three/addons/loaders/RGBELoader.js"
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color("#202020");
@@ -31,7 +32,7 @@ controls.autoRotate = true;
 
 /* ---------- Object In Scene ---------- */
 let mixer;
-let modelURL = "../assets/homePage.glb",
+let modelURL = "../assets/MyWorld.glb",
   model;
 const loader = new GLTFLoader();
 loader.load(modelURL, (gltf) => {
@@ -43,7 +44,7 @@ loader.load(modelURL, (gltf) => {
       child.material.metalness = 0;
     }
   });
-  //scene.add(model);
+  scene.add(model);
   mixer = new THREE.AnimationMixer(gltf.scene);
   gltf.animations.forEach((clip) => {
     mixer.clipAction(clip).play();
@@ -53,7 +54,27 @@ loader.load(modelURL, (gltf) => {
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+//scene.add( cube );
+
+/* ---------- HDRI ---------- */
+// const pmremGenerator = new THREE.PMREMGenerator( renderer );
+
+// const hdriLoader = new RGBELoader()
+// hdriLoader.load( '../assets/shy.hdr', function ( texture ) {
+//   const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
+//   texture.dispose(); 
+//   scene.environment = envMap
+// } );
+
+new RGBELoader().load('../assets/shy.hdr', texture => {
+  const gen = new THREE.PMREMGenerator(renderer)
+  const envMap = gen.fromEquirectangular(texture).texture
+  scene.environment = envMap
+  scene.background = envMap
+  
+  texture.dispose()
+  gen.dispose()
+})
 
 /* ---------- Animation ---------- */
 window.addEventListener("resize", (event) => {
@@ -71,6 +92,6 @@ function animate() {
 	// cube.rotation.y += 0.01;
 
   if ( mixer ) mixer.update( delta );
-  renderer.render(scene, camera);
+  renderer.render(scene, blenderCamera);
 }
 animate();
