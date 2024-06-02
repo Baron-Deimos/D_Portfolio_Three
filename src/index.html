@@ -6,46 +6,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="carrousel.css">
-    <title>D Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <title>Damien Adventure</title>
 
     <script type="importmap">
             {
             "imports": {
                 "three": "https://cdn.jsdelivr.net/npm/three@v0.164.1/build/three.module.js",
-                "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.164.1/examples/jsm/"
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.164.1/examples/jsm/",
+                "dat.gui": "https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.module.js"
                 }
             }
     </script>
+
     <script src="carrousel.js"></script>
-    <script type="module" src="three.js"></script>
+    <script type="module" src="shader_scene.js"></script>
+    <!-- <script type="module" src="three.js"></script> -->
 </head>
 
 <body>
-    <canvas id="scene"></canvas>
+    <canvas id="scene"></canvas> 
+    
     <main>
         <ul>
             <li style="float: right; margin-right: 40px;"><img src="../assets/Grand_D.png" alt="D_Logo"></li>
             <li><a href="#">Home</a></li>
             <li><a href="#me">About</a></li>
-            <li><a href="#contact">Work</a></li>
-            <li><a href="#about">Contact</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
         <div id="pageContent">
             <img id="TitleImg" src="../assets/D_Title.png" alt="D_Title">
 
             <div id="me">
-                <h1>Choose your caratere</h1>
+                <h1> </h1> <h1> </h1>
                 <div class="slideshow-container">
 
                     <div class="mySlides fade">
                         <img src="../assets/Daniel.jpg">
-                        <div class="text">Une description d'un personnalité genre je trvail PTDR</div>
+                        <div class="text">
+                            <h1>Je suis Développeur</h1>
+                            <p>Passionné par l'informatique depuis mon enfance, j'ai toujours été fasciné 
+                            par le fonctionnement des ordinateurs et des logiciels. <br>
+                            <br>
+                            Actuellement étudiant en deuxième année d'informatique à l'IUT de Grenoble,
+                            je me suis forgé une solide base en développement logiciel. <br>
+                            <br>
+                            Mon objectif est de poursuivre mes études en école d'ingénieur
+                            pour approfondir mes compétences. <br>
+                            À travers mes projets académiques et personnels, j'ai pu explorer diverses 
+                            technologies et affiner mes compétences en résolution de problèmes complexes. <br>
+                            <br>
+                            Découvrez sur mon portfolio quelques-uns de mes projets qui reflètent 
+                            mon parcours et mes aspirations en tant que futur ingénieur en informatique.
+                            </p>
+                        </div>
                     </div>
 
                     <div class="mySlides fade">
-                        <img src="../assets/LeSam.jpg">
-                        <div class="text">Ouais le SAM bg le sang</div>
+                        <img src="../assets/Daniel.jpg">
+                        <div class="text">
+                            <h1>Je suis Curieux</h1>
+                            <p>Je suis de nature curieuse ce qui me pousse à explorer et à apprendre de nouvelles choses. <br>
+                                <br>
+                            Que ce soit en m'intéressant sur des sujets divers et variés, ou en me lançant dans des projets 
+                            personnels, j'aime plonger dans l'inconnu et relever des défis. <br>
+                            <br>
+                            Apprendre ne me fait pas peur, au contraire, c'est une source constante de 
+                            motivation et de satisfaction.</p>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="../assets/Daniel.jpg">
+                        <div class="text">
+                            <h1>Je suis Rigoureux</h1>
+                            <p>J'accorde une grande importance à la rigueur dans mon travail. <br>
+                                <br>
+                                Que ce soit pour mes études, mes projets personnels ou professionnels, 
+                                je pense que la clé du succès réside dans une approche méthodique et organisée. <br>
+                                <br>
+                                Travailler de manière structurée m'aide non seulement à respecter les délais, 
+                                mais aussi à produire un travail qualité. <br>
+                                <br>
+                                J'aime planifier, prioriser et m'assurer que chaque étape d'un projet 
+                                est bien pensée et exécutée. <br>
+                                <br>
+                                Cette approche m'a permis de mener à bien de nombreux projets académiques et personnels, 
+                                en respectant toujours les exigences et les objectifs fixés.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="../assets/Daniel.jpg">
+                        <div class="text">
+                            <h1>Je suis Sociable</h1>
+                            <p>Travailler en équipe a toujours été une source de motivation et de satisfaction pour moi. <br>
+                                <br>
+                            J'aime collaborer avec d'autres personnes, échanger des idées, et trouver des solutions ensemble. 
+                            Je trouve que les travaux en équipe sont bien plus intéressants et stimulants que de travailler seul. <br>
+                            <br>
+                            J'ai eu de nombreuses occasions de travailler en équipe sur divers projets. 
+                            Ces expériences m'ont permis de m'intégrer facilement dans de nouveaux groupes, 
+                            et de contribuer efficacement à la réalisation 
+                            des objectifs. <br>
+                            <br>
+                            J'apprécie particulièrement l'opportunité d'apprendre des autres et de partager mes propres 
+                            connaissances pour avancer ensemble.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="../assets/Daniel.jpg">
+                        <div class="text">
+                            <h1>Je suis Sportif</h1>
+                            <p>Le sport occupe une place importante dans ma vie. <br>
+                            Il me permet de décompresser, de retrouver mes amis et de me fixer 
+                            des objectifs physiques qui me sortent du monde du travail. <br>
+                            <br>
+                            Pratiquer un sport me donne l'occasion de me détendre après une journée de travail intense et de 
+                            recharger mes batteries. <br>
+                            <br>
+                            C'est aussi un excellent moyen de maintenir un mode de vie sain et de rester motivé. 
+                            </p>
+                        </div>
                     </div>
 
                     <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -57,10 +148,60 @@
                 <div style="text-align:center">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
                 </div>
             </div>
 
-            <div id="work">My Work</div>
+            <div id="work" class="projects-section">
+                <h1>Mes projets</h1>
+                <div class="projects-container">
+                    <div class="project-item">
+                        <a href="project1.html#project1">
+                            <img src="../assets/Laboratory.png" alt="Laboratory">
+                            <h3>Enigmathique, 1er prix du meilleur prototype (2024)</h3>
+                            <p>Plaforme Ludopédagogique en ligne pour les élèves de seconde en mathématiques</p>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="project2.html#project2">
+                            <img src="../assets/Jaquette_GamJam-IUT.png" alt="Jaquette_GamJam-IUT" style="width: 60%;">
+                            <h3>L'Aventure à l'IUT (2024)</h3>
+                            <p>Grand Vainqueurs Game Jam</p>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="project3.html#project3">
+                            <img src="path/to/project3.jpg" alt="Project 3">
+                            <h3>Architecture et développement de structures de données optimisées en C</h3>
+                            <p>Mission de stage chez ANIAH (2024)</p>
+                        </a>
+                    </div>
+
+                    <div class="project-item">
+                        <a href="project1.html#project1">
+                            <img src="path/to/project1.jpg" alt="Project 1">
+                            <h3>Développement d'une aide contextuelle</h3>
+                            <p>Mission de stage chez ANIAH (2024)</p>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="project2.html#project2">
+                            <img src="path/to/project2.jpg" alt="Project 2">
+                            <h3>Projet 2</h3>
+                            <p>Courte description du projet 2</p>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="project3.html#project3">
+                            <img src="path/to/project3.jpg" alt="Project 3">
+                            <h3>Projet 3</h3>
+                            <p>Courte description du projet 3</p>
+                        </a>
+                    </div>
+            </div>
+
         </div>
     </main>
 </body>

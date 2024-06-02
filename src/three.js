@@ -6,6 +6,7 @@ import { RGBELoader } from "three/addons/loaders/RGBELoader.js"
 const scene = new THREE.Scene();
 scene.background = new THREE.Color("#202020");
 let clock = new THREE.Clock();
+const loadingManager = new THREE.LoadingManager();
 /* ---------- Caméra / Renderer ---------- */
 const camera = new THREE.PerspectiveCamera(
   40,
@@ -32,8 +33,8 @@ controls.autoRotate = true;
 
 /* ---------- Object In Scene ---------- */
 let mixer;
-let modelURL = "../assets/MyWorld.glb",
-  model;
+let modelURL = "../assets/EncoreUnePutainDIdee.glb", model;
+
 const loader = new GLTFLoader();
 loader.load(modelURL, (gltf) => {
   blenderCamera = gltf.cameras["0"];
@@ -57,24 +58,15 @@ const cube = new THREE.Mesh( geometry, material );
 //scene.add( cube );
 
 /* ---------- HDRI ---------- */
-// const pmremGenerator = new THREE.PMREMGenerator( renderer );
-
-// const hdriLoader = new RGBELoader()
-// hdriLoader.load( '../assets/shy.hdr', function ( texture ) {
-//   const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
-//   texture.dispose(); 
+// new RGBELoader().load('../assets/shy.hdr', texture => {
+//   const gen = new THREE.PMREMGenerator(renderer)
+//   const envMap = gen.fromEquirectangular(texture).texture
 //   scene.environment = envMap
-// } );
-
-new RGBELoader().load('../assets/shy.hdr', texture => {
-  const gen = new THREE.PMREMGenerator(renderer)
-  const envMap = gen.fromEquirectangular(texture).texture
-  scene.environment = envMap
-  scene.background = envMap
+//   scene.background = envMap
   
-  texture.dispose()
-  gen.dispose()
-})
+//   texture.dispose()
+//   gen.dispose()
+// })
 
 /* ---------- Animation ---------- */
 window.addEventListener("resize", (event) => {
@@ -88,8 +80,7 @@ function animate() {
   requestAnimationFrame(animate);
   var delta = clock.getDelta();
 
-  // cube.rotation.x += 0.01;
-	// cube.rotation.y += 0.01;
+  renderer.domElement.style.filter = `blur(${20}px)`;
 
   if ( mixer ) mixer.update( delta );
   renderer.render(scene, blenderCamera);
