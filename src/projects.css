@@ -1,0 +1,154 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #0f0f0f;
+}
+
+.content {
+    padding-top: 70px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(27, 27, 27);
+    z-index: 95;
+}
+
+li {
+    float: left;
+}
+
+li img {
+    width: 50px;
+    mix-blend-mode: darken;
+}
+
+li a {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    display: block;
+    color: rgb(228, 228, 228);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ffffff82;
+    color: rgb(32, 32, 32);
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+}
+
+#loading-screen h1 {
+    font-size: 2em;
+    color: #ee0053;
+}
+
+#project-title {
+    padding: 20px;
+    background-color: #171717;
+}
+
+#project-title h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #ee0053;
+}
+
+#project-title p {
+    margin: 10px 0;
+}
+
+#project-title a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+#project-title a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 20px 10px;
+    color: #d3d3d3;
+}
+
+.project-container {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #171717;
+}
+
+.project-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+    transition: transform 0.3s;
+    background-color: #272727;
+}
+
+.project-item h2 {
+    font-size: 1.5em;
+    margin: 10px 10px;
+}
+
+.project-item .keyword {
+    color: #b5006f;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.project-item p {
+    color: #e4e4e4;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .project-item {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-item {
+        flex: 1 1 100%;
+    }
+}

@@ -1,66 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="projects.css">
     <title>Projets</title>
 </head>
+
 <body>
-    <div id="project-title">
-        <h1>Tous mes projets</h1>
-        <p><a href="">Universitaire</a> et <a href="#pp">Personnel</a></p>
-    </div>
-    <h1>Projets Universitaires</h1>
-    <div id="project1">
-        <h1>Enigmathique, 1er prix du meilleur prototype (2024)</h1>
-        <p class="keyword">UML / IHM / React / JS / WebSockets / Three JS, équipe de 8</p>
-        <p>En équipe de huit, nous avons conçu un jeu alliant amusement et apprentissage, nommé Enigmathique. 
-            Ce jeu, élaboré sous la forme d'un escape game axé sur les mathématiques pour les élèves de seconde, 
-            résulte d'un travail approfondi allant de l'étude des méthodes actuelles à la conception, en passant 
-            par la fabrication, le développement et le design.
-            <br>
-            <br>
-            Pendant une période de trois semaines, notre équipe a travaillé d'arrache-pied pour créer Enigmathique. 
-            Pour notre projet, nous avons décidé de mettre en place une architecture technologique moderne en 
-            utilisant React pour le frontend, ExpressJs pour le backend et Three.js pour la création de salles en 3D. 
-            Nous avons également recouru à Blender pour la conception en 3D des salles et installé nos propres serveurs, 
-            dotés d'une base de données qui leur est consacrée.
-            <br>
-            <br>
-            Dans ce projet, j'ai pris en charge la création de la logique de jeu ainsi que de l'affichage des salles en 3D.
-            Ma mission a été le développement des interactions avec les objets 3D de la scène pour afficher des énigmes. 
-            Et de crée le système d'énigme avec des logiques différentes en fonction de nos attendus.
-            Cette expérience a été enrichissante et m'a permis de perfectionner mes compétences en développement web. </p>
-        <img src="../assets/Laboratory.png" alt="Jaquette_GamJam-IUT" style="width: 60%;">
-    </div>
+    <ul>
+        <li style="float: right; margin-right: 40px;"><img src="../assets/Grand_D.png" alt="D_Logo"></li>
+        <li><a href="index.html#TitleImg">Home</a></li>
+        <li><a href="index.html#me">About</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-    <div id="project2">
-        <h1>L'Aventure à l'IUT, Grand Vainqueurs Game Jam (2024)</h1>
-        <p class="keyword">Python (Pygame et PyTMX), équipe de 4</p>
-        <p>
-            Lors d'une compétition de développement de jeux vidéo de 4 jours, 
-            notre groupe de 4 membres s'est focalisé sur la réalisation d'un jeu en Python 
-            avec Pygame et PyTMX, ayant pour sujet imposé "Le monde enchanté de l'IUT2". 
-            Nous avons créé un jeu où le but est d'affronter des boss qui représentent nos 
-            enseignants pour acquérir des savoirs et réussir à l'IUT2. À la fin de la compétition, 
-            nous avons remporté la Game Jam.
-            <br>
-            <br>
-            Personnellement, j'ai développé la hitbox du joueur, la gestion des projectiles et 
-            contribué au design du jeu, ainsi qu'à une partie de la carte. Cette expérience combinait 
-            créativité, collaboration et programmation pour aboutir à un jeu divertissant et plein
-            d'humour, avec nos professeurs dessinés en pixel art et leurs répliques. 
-        </p>
-        <img src="../assets/Jaquette_GamJam-IUT.png" alt="Jaquette_GamJam-IUT" style="width: 60%;">
-    </div>
+    <div class="content">
+        <div id="project-title">
+            <h1>Tous mes projets</h1>
+            <p><a href="">Universitaire</a> et <a href="#pp">Personnel</a></p>
+        </div>
 
-    <div id="project3">
-        <h1>Mission de stage chez ANIAH (2024), Développement d'une aide contextuelle</h1>
-        <p class="keyword">IHM / Angular / Markdown, autonomis</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non quod blanditiis, esse alias laboriosam nemo.</p>
-        <img src="../assets/LogoANIAH.png" alt="Project 1">
-    </div>
+        <h1 id="universitaire">Projets Universitaires</h1>
+        <div class="project-container">
+            <div class="project-item" id="project1">
+                <h1>Enigmathique, 1er prix du meilleur prototype (2024)</h1>
+                <p class="keyword">UML / IHM / React / JS / WebSockets / Three JS, équipe de 8</p>
+                <p>En équipe de huit, nous avons conçu un jeu alliant amusement et apprentissage, nommé Enigmathique.
+                    Ce jeu, élaboré sous la forme d'un escape game axé sur les mathématiques pour les élèves de seconde,
+                    résulte d'un travail approfondi allant de l'étude des méthodes actuelles à la conception, en passant
+                    par la fabrication, le développement et le design.
+                    <br>
+                    <br>
+                    Pendant une période de trois semaines, notre équipe a travaillé d'arrache-pied pour créer
+                    Enigmathique.
+                    Pour notre projet, nous avons décidé de mettre en place une architecture technologique moderne en
+                    utilisant React pour le frontend, ExpressJs pour le backend et Three.js pour la création de salles
+                    en 3D.
+                    Nous avons également recouru à Blender pour la conception en 3D des salles et installé nos propres
+                    serveurs,
+                    dotés d'une base de données qui leur est consacrée.
+                    <br>
+                    <br>
+                    Dans ce projet, j'ai pris en charge la création de la logique de jeu ainsi que de l'affichage des
+                    salles en 3D.
+                    Ma mission a été le développement des interactions avec les objets 3D de la scène pour afficher des
+                    énigmes.
+                    Et de crée le système d'énigme avec des logiques différentes en fonction de nos attendus.
+                    Cette expérience a été enrichissante et m'a permis de perfectionner mes compétences en développement
+                    web.
+                </p>
+                <img src="../assets/Laboratory.png" alt="Jaquette_GamJam-IUT" style="width: 60%;">
+            </div>
 
-    <h1 id="pp">Projets Personnel</h1>
+            <div class="project-item" id="project2">
+                <h1>L'Aventure à l'IUT, Grand Vainqueurs Game Jam (2024)</h1>
+                <p class="keyword">Python (Pygame et PyTMX), équipe de 4</p>
+                <p>
+                    Lors d'une compétition de développement de jeux vidéo de 4 jours,
+                    notre groupe de 4 membres s'est focalisé sur la réalisation d'un jeu en Python
+                    avec Pygame et PyTMX, ayant pour sujet imposé "Le monde enchanté de l'IUT2".
+                    Nous avons créé un jeu où le but est d'affronter des boss qui représentent nos
+                    enseignants pour acquérir des savoirs et réussir à l'IUT2. À la fin de la compétition,
+                    nous avons remporté la Game Jam.
+                    <br>
+                    <br>
+                    Personnellement, j'ai développé la hitbox du joueur, la gestion des projectiles et
+                    contribué au design du jeu, ainsi qu'à une partie de la carte. Cette expérience combinait
+                    créativité, collaboration et programmation pour aboutir à un jeu divertissant et plein
+                    d'humour, avec nos professeurs dessinés en pixel art et leurs répliques.
+                </p>
+                <img src="../assets/Jaquette_GamJam-IUT.png" alt="Jaquette_GamJam-IUT" style="width: 60%;">
+            </div>
+
+            <div class="project-item" id="project3">
+                <h1>Mission de stage chez ANIAH (2024), Développement d'une aide contextuelle</h1>
+                <p class="keyword">IHM / Angular / Markdown, autonomis</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non quod blanditiis, esse alias laboriosam
+                    nemo.</p>
+                <img src="../assets/LogoANIAH.png" alt="Project 1">
+            </div>
+        </div>
+        <h1 id="pp">Projets Personnel</h1>
+    </div>
 </body>
+
 </html>
