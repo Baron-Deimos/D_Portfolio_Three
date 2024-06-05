@@ -6,6 +6,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: #0f0f0f;
+    color: #d3d3d3;
 }
 
 .content {
@@ -109,7 +110,7 @@ h1 {
 
 .project-item {
     background-color: white;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 8px;
     padding: 30px;
     flex: 1 1 calc(33.333% - 40px);
