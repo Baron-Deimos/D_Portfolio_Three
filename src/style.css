@@ -13,6 +13,25 @@ canvas {
     position: fixed;
 }
 
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #151515; /* or any color you like */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+}
+
+#loading-screen h1 {
+    font-size: 4em;
+    color: #e8006c; /* or any color you like */
+}
+
 main {
     z-index: 90;
     position: absolute;
