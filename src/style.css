@@ -9,6 +9,8 @@ body {
 
 #pageContent {
     padding-top: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ddd;
 }
 
 
@@ -84,6 +86,7 @@ li a:hover:not(.active) {
 #pageContent {
     margin-top: 30px;
     width: 100%;
+    display: block;
 }
 
 #TitleImg {
@@ -97,7 +100,7 @@ li a:hover:not(.active) {
 #me {
     margin-top: 40%;
     width: 100%;
-    height: 800px;
+    height: 100%;
     color: rgb(255, 240, 246);
     background-color:rgba(0, 0, 0, 0.507);
     scroll-behavior: smooth;
@@ -111,7 +114,7 @@ li a:hover:not(.active) {
 
 #work {
     width: 100%;
-    height: 800px;
+    height: 100%;
     color: rgb(255, 240, 246);
     background-color:rgba(0, 0, 0, 0.507);
     scroll-behavior: smooth;
@@ -158,4 +161,57 @@ li a:hover:not(.active) {
 
 .project-item:hover {
     transform: scale(1.05);
+}
+
+#skills {
+    padding: 40px 20px;
+    background-color:rgba(0, 0, 0, 0.507);
+}
+
+.skill-category {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.skill-category h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 1.5em;
+    color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    .skill-category h2 {
+        font-size: 1.5em;
+    }
+
+    .skill-item img {
+        width: 80px;
+    }
+
+    .skill-item p {
+        font-size: 0.9em;
+    }
 }

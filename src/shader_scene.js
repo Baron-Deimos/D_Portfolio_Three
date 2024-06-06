@@ -101,14 +101,14 @@ let shaderControl = {
 
 let cameraControl = {
     useFreeCam: false,
-    speed: 0.38,
+    speed: 0.3,
     xMultiply: 2.4,
     yMultiply: 7.9,
     zMultiply: 3.9,
 };
 
 let bloomControl = {
-    strength: 0.6,
+    strength: 0.4,
     radius: 1.05,
     threshold: 0.0
 };
